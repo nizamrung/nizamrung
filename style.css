@@ -1,0 +1,28 @@
+
+:root{--bg:#f4f1ea;--fg:#1d1d1f;--bar:#ffffff;--btn:#e6e1d4;--btn-h:#d6cfbc;--acc:#0f6b4f;--shadow:rgba(0,0,0,.25)}
+@media (prefers-color-scheme:dark){:root{--bg:#18181b;--fg:#f2f2f2;--bar:#222226;--btn:#33333a;--btn-h:#45454e;--acc:#4cc9a0;--shadow:rgba(0,0,0,.6)}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:70px}
+body{font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq",Tahoma,system-ui,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+.bar{position:sticky;top:0;z-index:10;background:var(--bar);box-shadow:0 1px 8px var(--shadow);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.bar .brand{font-weight:700;font-size:1rem;color:var(--acc);line-height:1.8}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.btn,.nav select,.nav .num{background:var(--btn);color:var(--fg);border:0;border-radius:8px;padding:6px 12px;font:inherit;font-size:.9rem;cursor:pointer;line-height:1.7}
+.btn:hover{background:var(--btn-h)}
+.btn.off{opacity:.35;pointer-events:none}
+.nav .num{cursor:default;direction:ltr}
+main{flex:1;width:100%;max-width:980px;margin:0 auto;padding:14px 10px 20px}
+.page img{display:block;width:100%;height:auto;background:#fff;border-radius:4px;box-shadow:0 6px 24px var(--shadow)}
+.pager{display:flex;justify-content:space-between;gap:10px;margin-top:16px}
+.pager .btn{flex:1;text-align:center;padding:10px}
+footer{text-align:center;padding:14px;font-size:.8rem;opacity:.65}
+.hero{text-align:center;padding:26px 10px 10px}
+.hero h1{font-size:clamp(1.3rem,4vw,2rem);line-height:2;color:var(--acc)}
+.hero p{opacity:.75;line-height:2}
+.hero .btn{display:inline-block;margin-top:10px;background:var(--acc);color:#fff;padding:10px 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;padding:10px 0}
+.card{text-align:center;font-size:.85rem}
+.card img{aspect-ratio:757/1051;object-fit:cover;display:block;width:100%;height:auto;background:#fff;border-radius:4px;box-shadow:0 3px 12px var(--shadow);margin-bottom:6px;transition:transform .15s}
+.card:hover img,.card:focus img{transform:translateY(-4px)}
+@media (max-width:480px){.bar{padding:6px 8px}.btn,.nav select,.nav .num{padding:5px 9px;font-size:.82rem}.grid{grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:10px}}
